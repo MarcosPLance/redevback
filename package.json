@@ -1,0 +1,36 @@
+{
+  "name": "redesocial",
+  "version": "0.1.0",
+  "description": "rede social devs",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "server": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/marcos.lsantos/redesocial_back.git"
+  },
+  "author": "LanceMP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/marcos.lsantos/redesocial_back/issues"
+  },
+  "homepage": "https://gitlab.com/marcos.lsantos/redesocial_back#readme",
+  "dependencies": {
+    "aws-sdk": "^2.797.0",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "express-validator": "^6.6.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.15",
+    "nodemon": "^2.0.6"
+  },
+  "engine": {
+    "node": "^10....."
+  }
+}
