@@ -1,6 +1,11 @@
 const mongoose = require('mongoose')
 const { Schema } = mongoose
 
+const opts ={
+    createdAt: 'created_at',
+    updatedAt: 'updated_at'
+}
+
 const UserSchema = new Schema ({
     name: String,
     username: String,
@@ -38,7 +43,7 @@ const UserSchema = new Schema ({
     privacy_term_accepted: Boolean,
 
     skills: {
-        type: [tring],
+        type: [String],
         required: true
     },
 
@@ -80,4 +85,4 @@ const UserSchema = new Schema ({
     },
 }, opts);
 
-module.exports = mongoose.model('user',, UserSchema);
+module.exports = mongoose.model('user', UserSchema);
