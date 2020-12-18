@@ -26,14 +26,24 @@ if(debug){
     connectDB()    
 }else{
     const db = process.env.mongoTestURI || config.get('mongoTestURI')
-    connectDB()
+    connectDB(db)
 }
 
 
 
 //Routes
-app.use('/',require('./routes/api/main'))
+app.get('/',(req, res) => res.send('Funcionando'))
 app.use('/user',require('./routes/api/user'))
+app.use('/auth', require('./routes/api/auth'))
+app.use('/topic', require('./routes/api/topic'))
+app.use('/post', require('./routes/api/post'))
+app.use('/like', require('./routes/api/like'))
+app.use('/dislike', require('./routes/api/dislike'))
+app.use('/education', require('./routes/api/education'))
 
 
-app.listen(PORT, () => console.log(`Porta ${PORT}`) )
+
+const server = app.listen(PORT, () => console.log(`Porta ${PORT}`) )
+
+
+module.exports = {app , server}
